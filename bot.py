@@ -126,26 +126,12 @@ def handle_report():
         send(f"<pre>{chunk}</pre>")
 
 
-def handle_drafts():
-    draft_dir = Path("./drafts")
-    drafts = sorted(draft_dir.glob("cover_*.md"), reverse=True)[:3]
-    if not drafts:
-        send("📭 커버레터 초안이 없습니다.")
-        return
-
-    for draft in drafts:
-        content = draft.read_text(encoding="utf-8")
-        send(f"✍️ <b>{draft.name}</b>\n\n{content[:3500]}")
-        time.sleep(0.5)
-
-
 def handle_help():
     send(
         "🤖 <b>Job Radar 명령어</b>\n\n"
         "/실행 — 지금 바로 수집·분석·발송\n"
         "/현황 — 마지막 실행 결과 요약\n"
         "/보고서 — Top 10 분석 보고서\n"
-        "/초안 — 커버레터 초안 보기\n"
         "/도움 — 명령어 목록"
     )
 
@@ -157,8 +143,6 @@ COMMANDS = {
     "/status": handle_status,
     "/보고서": handle_report,
     "/report": handle_report,
-    "/초안": handle_drafts,
-    "/drafts": handle_drafts,
     "/도움": handle_help,
     "/help": handle_help,
     "/start": handle_help,

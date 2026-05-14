@@ -128,18 +128,6 @@ def run(analysis_result: dict, total_collected: int, elapsed: int = 0) -> None:
 </div>"""
         _send(urgent_msg)
 
-    # 커버레터 초안
-    if draft_paths:
-        draft_msg = """<div style="background: linear-gradient(135deg, #4ECDC4 0%, #44A08D 100%); border-radius: 12px; padding: 16px; margin-bottom: 16px; color: white;">
-  <h3 style="margin: 0 0 8px 0; font-size: 18px;">✍️ 지원 동기 초안 작성 완료</h3>
-  <p style="margin: 8px 0; font-size: 13px; opacity: 0.95;">다음 공고들의 커버레터 초안이 생성되었습니다.</p>
-  <div style="background: rgba(0,0,0,0.15); padding: 10px; border-radius: 6px; margin-top: 10px; font-size: 12px; font-family: monospace;">"""
-        for path in draft_paths:
-            draft_msg += f"    📄 {Path(path).name}<br>\n"
-        draft_msg += """  </div>
-</div>"""
-        _send(draft_msg)
-
     # 푸터
     footer = f"""<div style="text-align: center; padding: 16px; background: #F8F9FA; border-radius: 12px; border-top: 2px solid #DDD; font-size: 12px; color: #666;">
   <p style="margin: 0 0 8px 0;">
