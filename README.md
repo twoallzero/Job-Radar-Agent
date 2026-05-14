@@ -53,8 +53,8 @@ python main.py
 bash setup_cron.sh
 ```
 
-<img width="723" height="1478" alt="preview" src="https://github.com/user-attachments/assets/841cd113-3b16-4e20-b9fa-f2f3dc23eafa" />
-
+## 실행
+<img width="300" alt="preview" src="https://github.com/user-attachments/assets/841cd113-3b16-4e20-b9fa-f2f3dc23eaea" />
 
 ## 점수 기준
 
