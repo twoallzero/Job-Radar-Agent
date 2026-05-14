@@ -130,5 +130,3 @@ MY_STACK = ["Python", "SQL", "영어", "Excel", "PPT"]
 ```
 
 ---
-
-**Made with ❤️ using Python + Playwright + Telegram API**
